@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity">
+
+
+    <TextView
+        android:id="@+id/txtLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/galada"
+        android:text="ShareLeh"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtLoginDesc"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your journey in making the world a better place through food sharing starts here! Begin by logging in to your account."
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/txtLoginTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtLoginTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtLoginTitle" />
+
+    <RelativeLayout
+        android:id="@+id/layoutLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtLoginDesc"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="Email"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTxtLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/txtEmail"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="7dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtPw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="5dp"
+            android:text="Password"
+            android:textSize="16sp"
+            android:layout_below="@+id/editTxtLoginEmail" />
+
+        <EditText
+            android:id="@+id/editTxtLoginPw"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/txtPw"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingHorizontal="7dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invalid password, please try again!"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="10dp"
+            android:background="#2AE53935"
+            android:textColor="@color/red_400"
+            android:textSize="14sp"
+            android:layout_below="@+id/editTxtLoginPw"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="7dp"
+        android:paddingVertical="9dp"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutLogin"
+        app:layout_constraintStart_toStartOf="@+id/layoutLogin"
+        app:layout_constraintTop_toBottomOf="@+id/layoutLogin" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="7dp"
+        android:paddingVertical="9dp"
+        android:text="I'm a New User"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

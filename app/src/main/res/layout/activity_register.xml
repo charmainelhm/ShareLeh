@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/txtRegTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/galada"
+        android:text="ShareLeh"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRegDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registration Page"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/txtRegTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtRegTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegTitle" />
+
+    <RelativeLayout
+        android:id="@+id/layoutRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegTitle">
+
+        <TextView
+            android:id="@+id/txtUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="Username"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTxtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/txtUsername"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="Full Name"
+            android:textSize="16sp"
+            android:layout_below="@+id/editTxtUsername"/>
+
+        <EditText
+            android:id="@+id/editTxtFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFullName"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="Email Address"
+            android:textSize="16sp"
+            android:layout_below="@+id/editTxtFullName"/>
+
+        <EditText
+            android:id="@+id/editTxtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/txtEmail"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtPw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="Password"
+            android:textSize="16sp"
+            android:layout_below="@+id/editTxtEmail"/>
+
+        <EditText
+            android:id="@+id/editTxtPw"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/txtPw"
+            android:ems="10"
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtReenterPw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="Re-enter Password"
+            android:textSize="16sp"
+            android:layout_below="@+id/editTxtPw"/>
+
+        <EditText
+            android:id="@+id/editTxtReenterPw"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/txtReenterPw"
+            android:ems="10"
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invalid password, please try again!"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2AE53935"
+            android:textColor="@color/red_400"
+            android:textSize="14sp"
+            android:layout_below="@+id/editTxtReenterPw"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtRegDesc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please ensure that all fields are filled up."
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRegister"
+ />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="7dp"
+        android:paddingVertical="9dp"
+        android:text="Register"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegDesc2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
